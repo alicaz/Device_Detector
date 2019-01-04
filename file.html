@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aasia Dirie ** DeviceDetect.js **</title>
+    
+      <link href="file.css" rel="stylesheet"
+              type="text/css" media="all"/>
+  </head>
+  <body>
+
+    <div class="container-outer">
+      <div class="container-middle">
+        <div class="container-inner">
+          <div class="content">
+            <h2>Device Type</h2>
+            <span class="mobile">.mobile</span>
+            <span class="tablet">.tablet</span>
+            <span class="desktop">.desktop</span>
+
+            <h2>Device OS</h2>
+            <span class="ios">.ios</span>
+            <span class="iphone">.iphone</span>
+            <span class="ipad">.ipad</span>
+            <span class="ipod">.ipod</span>
+            <span class="android">.android</span>
+            <span class="blackberry">.blackberry</span>
+            <span class="windows">.windows</span>
+            <span class="fxos">.fxos</span>
+            <span class="meego">.meego</span>
+            <span class="television">.television</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // Dummy value for demonstrating device.noConflict()
+      window.device = "Hello World!";
+    </script>
+
+    <script src="file.js"></script>
+
+    <script type="text/javascript">
+     
+        
+      console.log("device.mobile() === %s", device.mobile());
+        
+      console.log("device.tablet() === %s", device.tablet());
+        
+      
+        
+      console.log("device.iphone() === %s", device.iphone());
+        
+      console.log("device.android() === %s", device.android());
+        
+      console.log("device.androidTablet() === %s", device.androidTablet());
+        
+      
+
+      var devicejs = device.noConflict();
+
+      console.log ("device.noConflict() [previous]", window.device);
+        
+      console.log ("device.noConflict() [device.js]", devicejs.iphone());
+    </script>
+
+  </body>
+</html>
